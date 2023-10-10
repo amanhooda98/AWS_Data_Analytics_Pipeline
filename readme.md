@@ -1,4 +1,4 @@
-# aws_data_pipeline
+# AWS_data_pipeline
 
 A Data pipeline made using Apache Spark, Apache Airflow Deployed on GCP using Terraform.
 

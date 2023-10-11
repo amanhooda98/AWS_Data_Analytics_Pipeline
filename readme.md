@@ -2,6 +2,7 @@
 
 A Data pipeline made using Apache Spark, Apache Airflow Deployed on GCP using Terraform.
 
+![Alt text](Images/architecture.png)
 ## Description
 
 ### Objective

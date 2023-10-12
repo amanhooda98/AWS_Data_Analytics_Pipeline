@@ -1,8 +1,7 @@
-# Databricks
+# AWS_Data_Analytics_Pipeline
 
-A Data pipeline made using Apache Spark, Apache Airflow Deployed on GCP using Terraform.
+A Data pipeline made using Amazon-S3,Snowflake and SparkSQL,deployed on AWS using Databricks.
 
-![Alt text](Images/architecture.png)
 ## Description
 
 ### Objective
@@ -14,7 +13,7 @@ The dataset is sourced from Kaggle https://www.kaggle.com/datasets/berkayalan/re
 Contains data from a Turkish retail chain for years 2017 to 2019 consisting of 200 million records.
 
 ### Architecture
-![Alt text](Images/FlowChart.png)
+![Alt text](Images/architecture.png)
 
 ### Tools & Technologies
 

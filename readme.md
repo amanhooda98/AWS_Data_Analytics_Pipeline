@@ -5,12 +5,12 @@ A Data pipeline made using Amazon-S3,Snowflake and SparkSQL,deployed on AWS usin
 ## Description
 
 ### Objective
-This project aims to simulate batch data processing activities for a retail chain where raw data produced by all the stores received in csv format goes through the cloud data pipeline to finally provide business insights on a Looker Studio Dashboard.
+This project simulates converting raw data from the producer, transforming it for an analytics use case and storing it on a data warehouse, from where it can be easily accessed by several teams to make analytical decisions
 
 ### Dataset
 
-The dataset is sourced from Kaggle https://www.kaggle.com/datasets/berkayalan/retail-sales-data,
-Contains data from a Turkish retail chain for years 2017 to 2019 consisting of 200 million records.
+The dataset is sourced from NYC taxi website https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page,  
+Contains data for January 2022 and January 2023, about 5 million records
 
 ### Architecture
 ![Alt text](Images/architecture.png)

@@ -51,7 +51,9 @@ Transform_Upload.ipynb
 
 this sparkSQL job Transforms and uploads the data to snowflake data warehouse.  
   
-![Alt text](Images/2.png)  
+![Alt text](Images/2.png)
+
+This Snowflake table can be connected to Tableau to create a dashboard as seen in https://github.com/amanhooda98/AWS_Data_Analytics_Pipeline#final-result.
 
 
 

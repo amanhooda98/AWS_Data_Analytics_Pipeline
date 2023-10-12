@@ -40,7 +40,8 @@ The cloud infrastructure for this project consists of :
 
 1.Create a quickstart Databricks stack on AWS.   
 2.The data files in parquet format have been stored in the S3-bucket.  
-3.Initiate creation of a new Single node Compute cluster from Databricks.  
+3.Initiate creation of a new Single node Compute cluster from Databricks.
+4.Create a new database and schema on snowflake to store the data.  
 4.This jupyter notebook contains the transformations steps and explanations:   
 
 ```bash
@@ -48,59 +49,14 @@ Transform_Upload.ipynb
 ```  
 ![Alt text](Images/1.png)  
 
-this sparkSQL job Transforms and uploads the data to snowflake data warehouse.
-
-![Alt text](<Images/Screenshot (10).png>)  
-
-3.The table data is read from the data warehouse using :-  
-
-```bash
-Spark\transform_upload.py  
-```
-this spark job also transforms the data for revenue and sales calculations and writes it to :  
-a. revenue-data table in the production schema   
-b. data split into monthly tables, which will be later used to make the comparison dashboard  
-
-The Walkthrough of the transformation steps can be found in :  
-
-```bash
-Spark\Transformation_Walkthrough.ipynb
-```
-
-![Alt text](Images/Screenshot(7).png)  
+this sparkSQL job Transforms and uploads the data to snowflake data warehouse.  
+  
+![Alt text](Images/2.png)  
 
 
-The monthly tables were used to make the dashboard in Looker studio by linking it to BigQuery.  
 
 
-### Execution:
 
-Start the Airflow instance on the dedicated server using the command :
-
-```bash
-airflow standalone
-```  
-![Alt text](<Images/Screenshot (4).png>)
-
-This starts the airflow web server and the same can be accesed at localhost:8080  
-opening the DAG from the DAGs page, the graph view looks like the above picture.  
-The DAG is defined in :  
-```bash
-Airflow\DAG.py
-```
-The DAG can be started using the button as highlighted in the picture below.  
-The status of the first task changes to running,also notice the CPU usage of the spark instance, all cores being utilized fully, showing the multithreaded nature  
-
-![Alt text](<Images/Screenshot (6).png>)
-
-The Whole Pipeline completed in 8 minutes and 20 seconds as seen in the picture below:  
-
-![Alt text](<Images/Screenshot (9).png>)  
-
-### What more can be done!  
-
-* Adding a streaming service such as Kafka to Process data as it comes,  
-resulting in a live dashboard.  
 
 
     
